@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 
 
-const API_KEY = "1d760bdbc81c4e87e76a123e70a5940c";
+const API_KEY = "youapikey";
 
 
 function App() {
