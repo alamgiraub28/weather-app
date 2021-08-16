@@ -1,10 +1,11 @@
 import cloudImg from './images/cloud-image.png';
 import './App.css';
 import { useState } from 'react';
+import API from './API';
 
 
 
-const API_KEY = "youapikey";
+const api = API.ApiKey;
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
   function getResult(e) {
     if (e.key === "Enter") {
       e.preventDefault();
-      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${API_KEY}`)
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${api}`)
         .then((res) => res.json())
         .then((result) => {
           setWeatherInfo(result)
